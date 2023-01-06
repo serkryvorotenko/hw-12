@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background: #E5E5E5;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #000;
-
 }
 
 a {
     text-decoration: none;
+}
+
+a:not(.button):hover {
+    text-decoration: underline;
 }
 
 .mini__header-link {
@@ -17,7 +24,6 @@ a {
     line-height: 16px;
     color: #333333;
     margin: 0 15px;
-
 }
 
 .mini__header {
@@ -26,20 +32,45 @@ a {
 }
 
 .container {
-    max-width: 1110px;
+    max-width: 1130px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .button {
     background: #FFFFFF;
     border: 2px solid #F13C6E;
     border-radius: 40px;
-    padding: 12px 60px;
+    padding: 12px 50px;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-width: 170px;
+    display: inline-block;
+}
 
+.button:hover {
+    background: #F13C6E;
+    color: white;
+}
+
+.button-reverse {
+    background: #F13C6E;
+    border-color: white;
+    color: white;
+}
+
+.button-reverse:hover {
+    background: #FFFFFF;
+    border: 2px solid #F13C6E;
+    color: #F13C6E;
+}
+
+.button-mini {
+    min-width: 130px;
 }
 
 .header__top-contact__tel {
@@ -52,6 +83,7 @@ a {
 .header__top-contact {
     display: inline-block;
     vertical-align: middle;
+    transform: translateY(20px);
 }
 
 .float-left {
@@ -70,8 +102,286 @@ a {
 
 .header__top {
     padding: 20px 0;
+    border: 1px solid #EFEFEF;
 }
 
 .header {
     background: #ffffff;
 }
+
+.header__bottom {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.header__bottom-link {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin: 0 20px;
+}
+
+.header__bottom-link:hover {
+    text-decoration: underline;
+}
+
+.banner__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+    margin: 0 0 30px;
+}
+
+.banner__text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin: 0 0 30px;
+}
+
+.banner {
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position-x: 50%;
+    padding: 192px 0 190px;
+}
+
+.product {
+    width: 22.5%;
+    background: #FFFFFF;
+    text-align: center;
+    padding: 25px 30px;
+    display: inline-block;
+    margin: 0 1.25%;
+}
+
+.catalog {
+    padding: 55px 0 0px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.catalog__row {
+    margin: 38px -1.25% 0;
+    font-size: 0;
+}
+
+.product__title {
+    margin: 20px 0 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #333333;
+}
+
+.product__price {
+    margin: 15px 0 0;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.product__button {
+    margin-top: 10px;
+    padding: 9px 50px;
+}
+
+.delivery__card {
+    display: inline-block;
+    margin: 0 1%;
+    width: 47.8%;
+    background: #F13C6E;
+    padding: 35px 45px 35px 40px;
+}
+
+.delivery__card-content {
+    display: inline-block;
+    width: 50%;
+}
+
+.delivery__card-icon {
+    display: inline-block;
+    float: right;
+    transform: translateY(20%);
+}
+
+.delivery {
+    margin: 98px -1% 100px;
+}
+
+.delivery__card-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.delivery__card-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin: 20px 0;
+    max-width: 130px;
+}
+
+input {
+    background: #FFFFFF;
+    border-radius: 30px;
+    border: none;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 14px 25px;
+    min-width: 225px;
+}
+
+input::placeholder {
+    color: #C4C4C4;
+}
+
+table {
+    background: #FFFFFF;
+    width: 100%;
+}
+
+.td {
+    height: 115px;
+    width: 25%;
+    border-right: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+    text-align: center;
+}
+
+.tr .td:last-child {
+    border-right: none;
+}
+
+.tr:last-child .td {
+    border-bottom: none;
+}
+
+.td img {
+    width: 60%;
+}
+
+.footer {
+    background: white;
+    margin-top: 80px;
+
+}
+
+.footer__nav-col__title {
+    max-width: 100px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140.62%;
+    padding-bottom: 5px;
+}
+
+.footer__nav-col__list {
+    border-top: 1px solid #EFEFEF;
+    padding-top: 25px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.footer__nav {
+    font-size: 0;
+    margin: 0 -1.25%;
+    padding: 50px 0;
+    border-bottom: 1px solid #EFEFEF;;
+}
+
+.footer__nav-col {
+    width: 22.5%;
+    margin: 0 1.25%;
+    display: inline-block;
+
+
+}
+
+.footer__nav-col__list-item {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.footer__nav-col__list a {
+    color: #828282;
+}
+
+.footer__contacts-socials__icon {
+    display: inline-block;
+    border: 2px solid #F13C6E;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin: 0 20px 0 0;
+    transition: 0.3s;
+}
+
+.footer__contacts-socials__icon:hover {
+    background: #F13C6E;
+    color: white;
+}
+
+.footer__contacts-socials__icon i {
+    color: #F13C6E;
+    font-size: 22px;
+    transform: translateY(10px);
+    transition: 0.3s;
+}
+
+.footer__contacts-socials__icon:hover i {
+    color: white;
+}
+
+.footer__contacts-socials {
+    display: inline-block;
+    padding: 38px 0;
+}
+
+.footer__contact-tel {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    margin-right: 40px;
+}
+
+.footer__contact {
+    transform: translateY(40px);
+}
+
+.footer__mini-col {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: #828282;
+    display: inline-block;
+    margin: 0;
+}
+
+.footer__mini-row {
+    width: 100%;
+}
+
+.footer__mini {
+    padding: 25px 0;
+}
+
+.footer__mini-row a {
+    cursor: pointer;
+
+}
+
+
