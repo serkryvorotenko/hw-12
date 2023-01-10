@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.3.js"
+            integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+            crossorigin="anonymous"></script>
+
 </head>
 <body>
 <nav class="mini__header">
@@ -20,6 +25,15 @@
         <div class="container clearfix">
             <a href="#" class="header__top-logo">
                 <img alt="" src="img/logo.svg">
+            </a>
+            <a href="#" class="header__top-logo__metalist">
+                <img src="img/FC_Metalist_Kharkiv_Logo.svg.png" alt="">
+            </a>
+            <a href="#" class="header__top-logo__ball">
+                <img src="img/ball-2.png" alt="">
+            </a>
+            <a href="#" class="header__top-logo__gate">
+                <img src="img/gate.png" alt="">
             </a>
             <div class="header__top-contact float-right">
                 <a href="#" class="header__top-contact__tel">1 (213) 123-45-67</a>
@@ -46,6 +60,9 @@
                 chatter, so be careful
             </p>
             <a class="button button-reverse " href="#">More</a>
+            <button id="modal_call" class="button button-reverse">
+                call me
+            </button>
         </div>
     </div>
 </div>
@@ -53,6 +70,7 @@
     <article>
         <section class="container">
             <div class="catalog">
+                <div class="partners__circle"></div>
                 <h3 class="catalog__title title">Special offers</h3>
                 <div class="catalog__row">
                     <div class="catalog__product product">
@@ -134,8 +152,8 @@
                 <a href="#" class="partners__item"><img src="img/impuls.png" alt=""></a>
                 <a href="#" class="partners__item"><img src="img/impuls.png" alt=""></a>
                 <a href="#" class="partners__item"><img src="img/impuls.png" alt=""></a>
+                <div class="partners__circle"></div>
             </div>
-
         </section>
         <section class="container">
             <div class="catalog">
@@ -269,5 +287,30 @@
         </div>
     </div>
 </section>
+<div id="modal" class="modal">
+    <div class="modal__body">
+        <div class="modal__title">
+            <label><input class="modal__input" type="text" placeholder="name"></label>
+            <label><input class="modal__input" type="tel" placeholder="#tel"></label>
+            <button class="button">To send...</button>
+            <button id="modal__close" class="modal__close">
+                <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
+<script>
+    $(document).ready(function () {
+            $("#modal_call").on("click", function () {
+                $("#modal").addClass("active");
+            });
+            $("#modal__close").on("click", function () {
+                $("#modal").removeClass("active");
+            });
+        }
+    )
+
+
+</script>

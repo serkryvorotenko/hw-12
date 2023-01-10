@@ -9,6 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: #000;
+    overflow-x: hidden;
 }
 
 a {
@@ -24,6 +25,9 @@ a:not(.button):hover {
     line-height: 16px;
     color: #333333;
     margin: 0 15px;
+    border: burlywood solid 1.5px;
+    transform: skew(-40deg);
+    display: inline-block;
 }
 
 .mini__header {
@@ -55,6 +59,139 @@ a:not(.button):hover {
 .button:hover {
     background: #F13C6E;
     color: white;
+}
+
+@keyframes metalist {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes metalist {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.header__top-logo__metalist img {
+    height: 80px;
+    position: absolute;
+    animation: metalist 3s infinite;
+    animation-play-state: paused;
+    z-index: 1;
+    left: 40px;
+    top: 100px;
+}
+
+.header__top-logo__metalist img:hover {
+    animation: metalist 3s infinite;
+    animation-play-state: running;
+}
+
+.header__top-logo__ball img {
+    height: 40px;
+    position: absolute;
+    z-index: 3;
+    animation: ball 4s infinite;
+}
+
+@keyframes ball {
+    0% {
+        transform: translate(50px, 10px)
+    }
+    10% {
+        transform: translate(100px, 30px)
+    }
+    20% {
+        transform: translate(150px, 50px)
+    }
+    30% {
+        transform: translate(200px, 60px)
+    }
+    40% {
+        transform: translate(250px, 70px)
+    }
+    50% {
+        transform: translate(300px, 80px)
+    }
+    60% {
+        transform: translate(350px, 90px)
+    }
+    70% {
+        transform: translate(400px, 100px)
+    }
+    80% {
+        transform: translate(450px, 130px)
+    }
+    85% {
+        transform: translate(600px, 160px)
+    }
+    90% {
+        transform: translate(750px, 200px)
+    }
+    100% {
+        transform: translate(800px, 170px)
+    }
+}
+
+@-webkit-keyframes ball {
+    0% {
+        transform: translate(50px, 10px)
+    }
+    10% {
+        transform: translate(100px, 30px)
+    }
+    20% {
+        transform: translate(150px, 50px)
+    }
+    30% {
+        transform: translate(200px, 60px)
+    }
+    40% {
+        transform: translate(250px, 70px)
+    }
+    50% {
+        transform: translate(300px, 80px)
+    }
+    60% {
+        transform: translate(350px, 90px)
+    }
+    70% {
+        transform: translate(400px, 100px)
+    }
+    80% {
+        transform: translate(450px, 130px)
+    }
+    85% {
+        transform: translate(600px, 160px)
+    }
+    90% {
+        transform: translate(750px, 200px)
+    }
+    100% {
+        transform: translate(800px, 170px)
+    }
+}
+
+.header__top-logo__gate img {
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    right: 5px;
+    top: 210px;
+    transform: rotate(45deg);
 }
 
 .button-reverse {
@@ -103,10 +240,12 @@ a:not(.button):hover {
 .header__top {
     padding: 20px 0;
     border: 1px solid #EFEFEF;
+    height: 300px;
 }
 
 .header {
     background: #ffffff;
+
 }
 
 .header__bottom {
@@ -123,6 +262,10 @@ a:not(.button):hover {
 
 .header__bottom-link:hover {
     text-decoration: underline;
+}
+
+.header__top-logo > img {
+    transform: rotate(40deg);
 }
 
 .banner__title {
@@ -394,4 +537,73 @@ input::placeholder {
 
 }
 
+.modal {
+    position: fixed;
+    background: #828282c0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: none;
+}
+
+.modal__body {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: #FFFFFF;
+    max-width: 30%;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 40px;
+}
+
+.modal__title {
+    position: relative;
+    color: red;
+    font-size: 20px;
+
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal__close {
+    position: absolute;
+    right: 16px;
+    top: -17px;
+    background: none;
+    border: none;
+    color: #F13C6E;
+    cursor: pointer;
+}
+
+.modal__input {
+    margin: 20px 0;
+    border-radius: 40px;
+    border: #F13C6E solid 1px;
+}
+
+.partners {
+    position: relative;
+
+}
+
+.catalog {
+    position: relative;
+}
+
+.partners__circle {
+    position: absolute;
+    background-color: rgba(241, 60, 110, 0.36);
+    left: 71%;
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    top: 0;
+    transform: translateY(100px);
+    z-index: -1;
+}
 
