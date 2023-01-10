@@ -109,79 +109,73 @@ a:not(.button):hover {
 
 @keyframes ball {
     0% {
-        transform: translate(50px, 10px)
+        transform: translate(50px, 10px) rotate(90deg);
     }
     10% {
-        transform: translate(100px, 30px)
+        transform: translate(100px, 30px) rotate(180deg);
     }
     20% {
-        transform: translate(150px, 50px)
+        transform: translate(150px, 50px) rotate(360deg);
     }
     30% {
-        transform: translate(200px, 60px)
+        transform: translate(200px, 60px) rotate(90deg);
     }
     40% {
-        transform: translate(250px, 70px)
+        transform: translate(250px, 70px)rotate(180deg);
     }
     50% {
-        transform: translate(300px, 80px)
+        transform: translate(300px, 80px)rotate(360deg);
     }
     60% {
-        transform: translate(350px, 90px)
+        transform: translate(350px, 90px)rotate(90deg);
     }
     70% {
-        transform: translate(400px, 100px)
+        transform: translate(400px, 100px)rotate(180deg);
     }
     80% {
-        transform: translate(450px, 130px)
-    }
-    85% {
-        transform: translate(600px, 160px)
+        transform: translate(450px, 130px)rotate(360deg);
     }
     90% {
-        transform: translate(750px, 200px)
+        transform: translate(600px, 160px)rotate(90deg);
     }
     100% {
-        transform: translate(800px, 170px)
+        transform: translate(750px, 200px)rotate(180deg);
     }
 }
 
 @-webkit-keyframes ball {
     0% {
-        transform: translate(50px, 10px)
+        transform: translate(50px, 10px) rotate(90deg);
     }
     10% {
-        transform: translate(100px, 30px)
+        transform: translate(100px, 30px) rotate(180deg);
     }
     20% {
-        transform: translate(150px, 50px)
+        transform: translate(150px, 50px) rotate(360deg);
     }
     30% {
-        transform: translate(200px, 60px)
+        transform: translate(200px, 60px) rotate(90deg);
     }
     40% {
-        transform: translate(250px, 70px)
+        transform: translate(250px, 70px)rotate(180deg);
     }
     50% {
-        transform: translate(300px, 80px)
+        transform: translate(300px, 80px)rotate(360deg);
     }
     60% {
-        transform: translate(350px, 90px)
+        transform: translate(350px, 90px)rotate(90deg);
     }
     70% {
-        transform: translate(400px, 100px)
+        transform: translate(400px, 100px)rotate(180deg);
     }
     80% {
-        transform: translate(450px, 130px)
-    }
-    85% {
-        transform: translate(600px, 160px)
+        transform: translate(450px, 130px)rotate(360deg);
     }
     90% {
-        transform: translate(750px, 200px)
+        transform: translate(600px, 160px)rotate(90deg);
     }
     100% {
-        transform: translate(800px, 170px)
+        transform: translate(750px, 200px)rotate(180deg);
     }
 }
 
